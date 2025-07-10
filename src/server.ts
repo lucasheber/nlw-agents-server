@@ -21,8 +21,6 @@ app.get('/health', () => {
     return { message: 'OK' };
 });
 
-app.register(getRoomsRoute, {
-    prefix: '/api',
-});
+app.register(getRoomsRoute);
 
 app.listen({ port: env.PORT });
